@@ -14,11 +14,15 @@ import {
 
 import Logo from '../assets/Logo'
 import { YES } from '../constants'
+<<<<<<< HEAD
 import {
   otherParentApprovalFormMessages,
   parentalLeaveFormMessages,
 } from '../lib/messages'
 import { currentDateStartTime } from '../lib/parentalLeaveTemplateUtils'
+=======
+import { otherParentApprovalFormMessages, parentalLeaveFormMessages } from '../lib/messages'
+>>>>>>> 8a8c8a51b (feat: spouse approval flow ok)
 import { getApplicationAnswers } from '../lib/parentalLeaveUtils'
 import { YesOrNo } from '../types'
 
@@ -114,7 +118,14 @@ export const OtherParentApproval: Form = buildForm({
               id: 'final',
               title: otherParentApprovalFormMessages.warning,
               titleVariant: 'h4',
+<<<<<<< HEAD
               description: otherParentApprovalFormMessages.startDateInThePast,
+=======
+              description: (application: Application) => {
+                const {startDate} = getApplicationAnswers(application.answers).periods[0]
+                return otherParentApprovalFormMessages.startDateInThePast
+              },
+>>>>>>> 8a8c8a51b (feat: spouse approval flow ok)
               condition: (answers) =>
                 new Date(
                   getApplicationAnswers(answers).periods[0].startDate,
@@ -144,9 +155,13 @@ export const OtherParentApproval: Form = buildForm({
     buildSection({
       title: '',
       condition: (answers) =>
+<<<<<<< HEAD
         new Date(
           getApplicationAnswers(answers).periods[0].startDate,
         ).getTime() < currentDateStartTime(),
+=======
+      new Date(getApplicationAnswers(answers).periods[0].startDate).getTime() < new Date().getTime(),
+>>>>>>> 8a8c8a51b (feat: spouse approval flow ok)
       children: [
         buildSubmitField({
           id: 'reject',
@@ -159,28 +174,18 @@ export const OtherParentApproval: Form = buildForm({
     buildSection({
       title: '',
       condition: (answers) =>
+<<<<<<< HEAD
         new Date(
           getApplicationAnswers(answers).periods[0].startDate,
         ).getTime() >= currentDateStartTime(),
+=======
+      new Date(getApplicationAnswers(answers).periods[0].startDate).getTime() > new Date().getTime(),
+>>>>>>> 8a8c8a51b (feat: spouse approval flow ok)
       children: [
         buildDescriptionField({
           id: 'final',
           title: coreMessages.thanks,
           description: coreMessages.thanksDescription,
-          condition: (answers) =>
-          new Date(getApplicationAnswers(answers).periods[0].startDate).getTime() > new Date().getTime(),
-        }),
-        buildMultiField({
-          title: '',
-          condition: (answers) =>
-          new Date(getApplicationAnswers(answers).periods[0].startDate).getTime() < new Date().getTime(),
-          children: [
-            buildDescriptionField({
-              id: 'final',
-              title: 'Application not processed',
-              description: 'Parental leave starting date is in the past, please reject this application',
-            }),
-          ],
         }),
       ],
     }),
