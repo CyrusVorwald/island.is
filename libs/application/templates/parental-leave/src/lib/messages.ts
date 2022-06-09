@@ -1017,11 +1017,8 @@ export const parentalLeaveFormMessages: MessageDir = {
     description: {
       id: 'pl.application:employer.description',
       defaultMessage:
-        'Vinnuveitandinn þinn þarf að samþykkja tilhögun fæðingarorlofsins þíns. ' +
-        'Þegar þú hefur sent umsóknina inn mun verða sendur vefpóstur á þetta netfang hér fyrir neðan. ' +
-        'Viðtakandi vefpóstsins mun fá aðgang að umsókninni, en einungis sjá upplýsingar sem varða tilhögun fæðingarorlofs.' +
-        'Ef vinnuveitandinn þinn hafnar umsókninni, þá fer umsóknin aftur á ákveðinn byrjunarreit, þar sem þú getur sótt um aftur.',
-      description: 'Add translation',
+        'Vinnuveitandi þarf að samþykkja tilhögun fæðingarorlofsins (ef þú hefur marga vinnuveitendur skal velja hæsta starfshlutfall). Þegar þú hefur sent umsóknina verður sendur tölvupóstur á netfangið sem þú skráir hér fyrir neðan. Viðtakandinn fær aðgang að umsókninni, en getur einungis séð upplýsingar sem varða tilhögun fæðingarorlofs. Ef vinnuveitandinn hafnar umsókninni þarft þú að gera viðeigandi breytingar á henni.',
+      description: 'Your employer must approve your parental leave arrangement. Once you have submitted your application, an email will be sent to the email address below. The recipient will get access to the application, but will only be able to see the timing arrangement. If your employer rejects the timing arrangement, you will need to change your application.',
     },
     email: {
       id: 'pl.application:employer.email',
@@ -1478,7 +1475,7 @@ export const parentalLeaveFormMessages: MessageDir = {
     startDateInThePast: {
       id: 'pl.application:finalscreen.start.date.in.the.past',
       defaultMessage:
-        'icel-trans: "Parental leave starting date is in the past, please correct this date"',
+        'Upphafsdagur fæðingarorlofs er í fortíðinni, vinsamlegast leiðréttu dagsetninguna',
       description:
         'Parental leave starting date is in the past, please correct this date',
     },
@@ -1610,13 +1607,13 @@ export const otherParentApprovalFormMessages = defineMessages({
   },
   warning: {
     id: 'pl.application:otherParent.warning',
-    defaultMessage: 'icel-trans: "Warning!"',
+    defaultMessage: 'Viðvörun!',
     description: 'Warning!',
   },
   startDateInThePast: {
     id: 'pl.application:otherParent.start.date.in.the.past',
     defaultMessage:
-      'icel-trans: "Application will not be processsed! Parental leave starting date has already passed!"',
+      'Umsóknin mun ekki vera afgreidd! Upphafsdagur fæðingarorlofs er þegar liðinn!',
     description:
       'Application will not be processsed! Parental leave starting date has already passed!',
   },
@@ -1866,8 +1863,7 @@ export const errorMessages = defineMessages({
   },
   startDateInThePast: {
     id: 'pl.application:errors.start.date.in.the.past',
-    defaultMessage:
-      'icel-trans: "Start date is in the past. The form will not be sent!"',
+    defaultMessage: 'Upphafsdagur er í fortíðinni. Umsókn verður ekki send!',
     description: 'Start date is in the past. The form will not be sent!',
   },
 })
