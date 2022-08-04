@@ -26,13 +26,29 @@ export const spmm = {
       id: 'sp.family:gender-unknown',
       defaultMessage: 'Ekki vitað',
     },
+    name: {
+      id: 'sp.family:name',
+      defaultMessage: 'Nafn',
+    },
     child: {
       id: 'sp.family:child',
       defaultMessage: 'Barn',
     },
-    parent: {
-      id: 'sp.family:parent',
-      defaultMessage: 'Foreldri',
+    parents: {
+      id: 'sp.family:parents',
+      defaultMessage: 'Foreldrar',
+    },
+    custodyParents: {
+      id: 'sp.family:custody-parents',
+      defaultMessage: 'Forsjáraðilar',
+    },
+    legalResidenceParent: {
+      id: 'sp.family:legal-residence-parent',
+      defaultMessage: 'Lögheimilsforeldri',
+    },
+    placeOfResidenceParent: {
+      id: 'sp.family:place-of-residence-parent',
+      defaultMessage: 'Búsetuforeldri',
     },
     spouse: {
       id: 'sp.family:spouse',
