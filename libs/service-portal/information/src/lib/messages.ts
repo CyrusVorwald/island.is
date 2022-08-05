@@ -34,6 +34,14 @@ export const spmm = {
       id: 'sp.family:child',
       defaultMessage: 'Barn',
     },
+    childName: {
+      id: 'sp.family:child-name',
+      defaultMessage: 'Nafn barns',
+    },
+    childSsn: {
+      id: 'sp.family:child-ssn',
+      defaultMessage: 'Kennitala barns',
+    },
     parents: {
       id: 'sp.family:parents',
       defaultMessage: 'Foreldrar',

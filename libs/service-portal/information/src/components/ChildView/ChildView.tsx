@@ -4,6 +4,7 @@ import { NationalRegistryChild } from '@island.is/api/schema'
 import { ApolloError } from 'apollo-client'
 import {
   Box,
+  Button,
   Divider,
   GridColumn,
   GridRow,
@@ -80,6 +81,30 @@ const ChildView: FC<Props> = ({
           }}
         />
       )}
+
+      <Box>
+        <GridRow>
+          <GridColumn paddingBottom={4} span="12/12">
+            <Box
+              display="flex"
+              justifyContent="flexStart"
+              flexDirection={['column', 'row']}
+            >
+              <Box>
+                <Button
+                  variant="utility"
+                  size="small"
+                  onClick={() => console.log('pdf!')}
+                  icon="receipt"
+                  iconType="outline"
+                >
+                  PDF
+                </Button>
+              </Box>
+            </Box>
+          </GridColumn>
+        </GridRow>
+      </Box>
 
       <Stack space={2}>
         <UserInfoLine
@@ -222,11 +247,29 @@ const ChildView: FC<Props> = ({
         <Box marginY={3} />
         {!person?.fate && !error && hasDetails ? (
           <>
-            <TwoColumnUserInfoLine
+            <UserInfoLine
               title={formatMessage({
                 id: 'sp.family:custody-TwoColumnUserInfoLine',
                 defaultMessage: 'Forsjáraðilar',
               })}
+              label={formatMessage({
+                id: 'sp.family:child-name',
+                defaultMessage: 'Nafn barns',
+              })}
+              content={person?.fullName}
+              loading={loading}
+            />
+            <Divider />
+            <UserInfoLine
+              label={formatMessage({
+                id: 'sp.family:child-ssn',
+                defaultMessage: 'Kennitala barns',
+              })}
+              content={person?.nationalId}
+              loading={loading}
+            />
+            <Divider />
+            <TwoColumnUserInfoLine
               label={formatMessage({
                 id: 'sp.family:name',
                 defaultMessage: 'Nafn',
