@@ -302,26 +302,6 @@ const ChildView: FC<Props> = ({
               loading={loading}
             />
             <Divider />
-            <TwoColumnUserInfoLine
-              label={formatMessage({
-                id: 'sp.family:legal-residence-parent',
-                defaultMessage: 'Lögheimilsforeldri',
-              })}
-              firstValue={'TODO'}
-              secondValue={''}
-              loading={loading}
-            />
-            <Divider />
-            <TwoColumnUserInfoLine
-              label={formatMessage({
-                id: 'sp.family:place-of-residence-parent',
-                defaultMessage: 'Búsetuforeldri',
-              })}
-              firstValue={'TODO'}
-              secondValue={''}
-              loading={loading}
-            />
-            <Divider />
           </>
         ) : null}
       </Stack>
