@@ -10,7 +10,6 @@ import {
   GridRow,
   LoadingDots,
   Stack,
-  Text,
 } from '@island.is/island-ui/core'
 import {
   formatNationalId,
@@ -94,11 +93,14 @@ const ChildView: FC<Props> = ({
                 <Button
                   variant="utility"
                   size="small"
-                  onClick={() => console.log('pdf!')}
-                  icon="receipt"
+                  onClick={() => window.print()}
+                  icon="print"
                   iconType="outline"
                 >
-                  PDF
+                  {formatMessage({
+                    id: 'sp.family:print',
+                    defaultMessage: 'Prenta',
+                  })}
                 </Button>
               </Box>
             </Box>
@@ -306,7 +308,7 @@ const ChildView: FC<Props> = ({
                 defaultMessage: 'Lögheimilsforeldri',
               })}
               firstValue={'TODO'}
-              secondValue={'TODO'}
+              secondValue={''}
               loading={loading}
             />
             <Divider />
@@ -316,7 +318,7 @@ const ChildView: FC<Props> = ({
                 defaultMessage: 'Búsetuforeldri',
               })}
               firstValue={'TODO'}
-              secondValue={'TODO'}
+              secondValue={''}
               loading={loading}
             />
             <Divider />

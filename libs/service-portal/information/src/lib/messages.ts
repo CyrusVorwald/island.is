@@ -114,6 +114,10 @@ export const spmm = {
       id: 'sp.family:user-famly-on-nr',
       defaultMessage: 'Einstaklingar á fjölskyldunúmerinu mínu',
     },
+    print: {
+      id: 'sp.family-print',
+      defaultMessage: 'Prenta',
+    },
   }),
   company: defineMessages({
     subtitle: {
