@@ -899,6 +899,31 @@
       },
       "tags": []
     },
+    "api-domains-electronic-registrations": {
+      "root": "libs/api/domains/electronic-registrations",
+      "sourceRoot": "libs/api/domains/electronic-registrations/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/api/domains/electronic-registrations/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api/domains/electronic-registrations"],
+          "options": {
+            "jestConfig": "libs/api/domains/electronic-registrations/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
     "api-domains-endorsement-system": {
       "root": "libs/api/domains/endorsement-system",
       "sourceRoot": "libs/api/domains/endorsement-system/src",
@@ -3533,6 +3558,31 @@
             "commands": [
               "yarn openapi-generator -o libs/clients/driving-license-book/gen/fetch -i libs/clients/driving-license-book/src/clientConfig.json"
             ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "clients-electronic-registrations": {
+      "root": "libs/clients/electronic-registrations",
+      "sourceRoot": "libs/clients/electronic-registrations/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/clients/electronic-registrations/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/clients/electronic-registrations"],
+          "options": {
+            "jestConfig": "libs/clients/electronic-registrations/jest.config.js",
+            "passWithNoTests": true
           }
         }
       },
