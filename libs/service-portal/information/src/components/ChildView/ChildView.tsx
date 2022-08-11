@@ -271,15 +271,30 @@ const ChildView: FC<Props> = ({
         <Box marginY={3} />
         {!person?.fate && !error && hasDetails ? (
           <>
-            <TwoColumnUserInfoLine
+            <UserInfoLine
               title={formatMessage({
                 id: 'sp.family:custody-parents',
                 defaultMessage: 'Forsjáraðilar',
               })}
               label={formatMessage({
                 id: 'sp.family:name',
-                defaultMessage: 'Nafn',
+                defaultMessage: 'Nafn barns',
               })}
+              content={person?.fullName}
+              loading={loading}
+            />
+            <Divider />
+            <UserInfoLine
+              label={formatMessage({
+                id: 'sp.family:child-ssn',
+                defaultMessage: 'Kennitala barns',
+              })}
+              content={person?.nationalId}
+              loading={loading}
+            />
+            <Divider />
+            <TwoColumnUserInfoLine
+              label={formatMessage(m.name)}
               firstValue={person?.nameCustody1}
               secondValue={person?.nameCustody2}
               loading={loading}
