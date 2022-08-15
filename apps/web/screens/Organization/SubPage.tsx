@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { FC, useMemo } from 'react'
+import { FC, useMemo } from 'react'
 import {
   Box,
   GridColumn,
@@ -14,6 +14,7 @@ import {
 import { withMainLayout } from '@island.is/web/layouts/main'
 import {
   ContentLanguage,
+  PowerBiSlice as PowerBiSliceSchema,
   Query,
   QueryGetNamespaceArgs,
   QueryGetOrganizationPageArgs,
@@ -34,6 +35,7 @@ import {
   OrganizationWrapper,
   SliceDropdown,
   Form,
+  PowerBiSlice,
 } from '@island.is/web/components'
 import { CustomNextError } from '@island.is/web/units/errors'
 import { Namespace } from '@island.is/api/schema'
@@ -41,7 +43,6 @@ import useContentfulId from '@island.is/web/hooks/useContentfulId'
 import { richText, SliceType } from '@island.is/island-ui/contentful'
 import { ParsedUrlQuery } from 'querystring'
 import { useRouter } from 'next/router'
-import { BLOCKS } from '@contentful/rich-text-types'
 import { scrollTo } from '@island.is/web/hooks/useScrollSpy'
 
 interface SubPageProps {
@@ -106,7 +107,7 @@ const SubPage: Screen<SubPageProps> = ({
       })),
     }),
   )
-
+  console.log(subpage.description)
   return (
     <OrganizationWrapper
       pageTitle={subpage.title}
@@ -168,6 +169,11 @@ const SubPage: Screen<SubPageProps> = ({
                       renderComponent: {
                         Form: (slice) => (
                           <Form form={slice} namespace={namespace} />
+                        ),
+                        PowerBiSlice: (slice: PowerBiSliceSchema) => (
+                          <PowerBiSlice
+                            embedPropsString={slice.powerBiEmbedProps}
+                          />
                         ),
                       },
                     })}

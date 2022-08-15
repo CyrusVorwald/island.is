@@ -520,6 +520,13 @@ export const slices = gql`
     config
   }
 
+  fragment PowerBiSliceFields on PowerBiSlice {
+    __typename
+    id
+    title
+    powerBiEmbedProps
+  }
+
   fragment BaseSlices on Slice {
     ...TimelineFields
     ...MailingListSignupFields
@@ -551,6 +558,7 @@ export const slices = gql`
     ...EventSliceFields
     ...FormFields
     ...StepperFields
+    ...PowerBiSliceFields
   }
 
   fragment AllSlices on Slice {

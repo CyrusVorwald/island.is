@@ -59,6 +59,7 @@ export default {
     'timelineEvent',
     'form',
     'formField',
+    'powerBiSlice',
   ],
   contentful: {
     space: process.env.CONTENTFUL_SPACE || '8k0h54kbe6bj',
