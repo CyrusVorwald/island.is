@@ -125,7 +125,7 @@
 ## Libs
 
 - [API](libs/api/README.md)
-    - [Clients Electronic Registrations](libs/api/domains/electronic-registrations/README.md)
+  - [Clients Electronic Registrations](libs/api/domains/electronic-registrations/README.md)
   - [Mocks](libs/api/mocks/README.md)
 - [API Catalogue](libs/api-catalogue/README.md)
   - [Elastic](libs/api-catalogue/elastic/README.md)
@@ -172,6 +172,7 @@
   - [National Registry](libs/clients/national-registry/README.md)
     - [V1](libs/clients/national-registry/v1/README.md)
     - [V2](libs/clients/national-registry/v2/README.md)
+  - [Passports](libs/clients/passports/README.md)
   - [Ark](libs/clients/payment/README.md)
   - [Payment Schedule](libs/clients/payment-schedule/README.md)
   - [Regulations](libs/clients/regulations/README.md)

@@ -49,7 +49,7 @@ ElectronicRegistrations.getInitialProps = async ({ apolloClient }) => {
       variables: {
         input: {
           dateFrom: new Date(2022, 0, 1),
-          dateTo: new Date(),
+          dateTo: new Date(2022, 4, 1),
         },
       },
     }),
