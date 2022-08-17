@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common'
-import { FirearmLicenseApiProvider } from './firearmApiProvider'
+import { FirearmLicenseApiProvider } from './firearmLicenseApiProvider'
 
 @Module({
   providers: [FirearmLicenseApiProvider],
