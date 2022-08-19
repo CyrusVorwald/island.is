@@ -41,8 +41,8 @@ const GeneralFishingLicenseTemplate: ApplicationTemplate<
   ],
   dataSchema: GeneralFishingLicenseSchema,
   allowedDelegations: [
-    AuthDelegationType.PersonalRepresentative,
-    AuthDelegationType.ProcurationHolder,
+    { type: AuthDelegationType.PersonalRepresentative },
+    { type: AuthDelegationType.ProcurationHolder },
   ],
   stateMachineConfig: {
     initial: States.PREREQUISITES,
