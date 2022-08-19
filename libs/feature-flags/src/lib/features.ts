@@ -15,12 +15,14 @@ export enum Features {
   exampleApplication = 'isExampleApplicationEnabled',
   accidentNotification = 'isAccidentNotificationEnabled',
   announcementOfDeath = 'isAnnouncementOfDeathEnabled',
-  noDebtCertificate = 'applicationTemplateNoDebtCertificateEnabled',
   drivingInstructorRegistrations = 'isDrivingInstructorRegistrationsEnabled',
   drivingSchoolConfirmations = 'isDrivingSchoolConfirmationsEnabled',
   passportApplication = 'isPassportApplicationEnabled',
   financialStatementInao = 'financialStatementInao',
   operatingLicense = 'isApplicationOperatingLicenseEnabled',
+
+  // Application delegation flags
+  noDebtCertificateCompanyDelegations = 'applicationNoDebtCertificateCompanyDelegations',
 
   // Application System Delegations active
   applicationSystemDelegations = 'applicationSystemDelegations',
